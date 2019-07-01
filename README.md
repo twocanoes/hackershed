@@ -1,7 +1,7 @@
 # hackershed
 Sample Code for Hacker Shed focusing on Hardware Hacking for macOS Admins
 
-Sample Projects:
+###Included Projects:
 
 * cli: implement a command line interface over serial for the Arudino
 * flashled: Simple project to show how to flash the LED
@@ -19,7 +19,7 @@ Adafruit ItsyBitsy 5v
 ### Dependencies###
 Recommend installing Serial.app for easy connecting to command line interface of Arduino
 
-### Running Projects###
+### Projects
 
 ###### CLI
 The CLI project is a template for a command line interface over serial.  Supports the following commands:
