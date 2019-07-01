@@ -16,7 +16,7 @@ Sample Code for Hacker Shed focusing on Hardware Hacking for macOS Admins
 ### Hardware
 Adafruit ItsyBitsy 5v
 
-### Dependencies###
+### Dependencies
 Recommend installing Serial.app for easy connecting to command line interface of Arduino
 
 ### Projects
