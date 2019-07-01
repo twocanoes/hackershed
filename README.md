@@ -77,8 +77,3 @@ When done, remove the launchdaemon by running these commands in Terminal:
     sudo launchctl unload serial_monitor.plist 
     rm serial_monitor.plist
     rm /usr/local/bin/serial_monitor.rb
-
-#### readbutton
-Project to monitor pin 4. Outputs "down" when connected to ground. To setup:
-1. Monitor serial port
-1. Connect button / short pins 4 and GND.
