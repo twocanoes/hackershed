@@ -42,7 +42,6 @@ The CLI project is a template for a command line interface over serial.  Support
 1. set_option `on|off`: turns an option on or off
 1. flash: start flashing the LED
 
-
 #### Flash LED
 Simple project to just flash the LED. Kind of the "hello world" of hardware hacking.
 
@@ -56,11 +55,28 @@ Project to show control of the keyboard or mouse. Comment / Uncomment the functi
 #### launchdaemon
 Sample project to show how to use a launchdaemon to monitor the state of an external button. The launchdaemon starts up a ruby script (`/usr/local/bin/serial_monitor.rb`) that speaks the button state if it is pressed. The button should be attached between ground and GPIO 4. Requires the readbutton firmware. To install:
 
-1. Copy serial_monitor.rb to /usr/local/bin and makes sure it is executable (`chmod 755 /usr/local/bin/serial_monitor.rb`).
-1. Open Terminal and run this command: `sudo gem install rubyserial`.
+1. Upload readbutton firmware to Arduino. 
+1. Copy serial_monitor.rb to `/usr/local/bin`
 1. Copy serial_monitor.plist to `/Library/LaunchDaemons`
-1. Flash readbutton firmware. 
-1. Connect button / short pins 4 and GND. Mac should speak "down".
+
+Open Terminal and run these commands: 
+
+    chmod 755 /usr/local/bin/serial_monitor.rb
+    sudo gem install rubyserial
+    cd /Library/LaunchDaemons/
+    sudo chown root serial_monitor.plist
+    sudo launchctl load serial_monitor.plist 
+    sudo launchctl start serial_monitor
+
+Connect button / short pins 4 and GND. Mac should speak "down".
+
+When done, remove the launchdaemon by running these commands in Terminal: 
+
+    cd /Library/LaunchDaemons/
+    sudo launchctl stop serial_monitor
+    sudo launchctl unload serial_monitor.plist 
+    rm serial_monitor.plist
+    rm /usr/local/bin/serial_monitor.rb
 
 #### readbutton
 Project to monitor pin 4. Outputs "down" when connected to ground. To setup:
