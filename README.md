@@ -11,7 +11,23 @@ Sample Code for Hacker Shed focusing on Hardware Hacking for macOS Admins
 
  
 ### Setup
-*instructions for setting up IDE and installing needed library on macOS*
+Start by downloading and installing the Arduino IDE app for your platform from the [Arduino software page](https://www.arduino.cc/en/Main/Software). Launch the Arduino app and open Preferences from the menu. Find the box near the bottom for “Additional Boards Manager URLs” and enter this text:
+
+    https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+
+Close Preferences, then go to the Tools menu and find “Board Manager…”. From the “Type” list, select “Contributed”. Look in the list for “Adafruit AVR Boards” and click the Install button.
+
+Next quit and relaunch Arduino IDE to confirm new boards are installed. Once relaunched, go back to the Tools menu and under “Board” find the Adafruit boards shown near the bottom and select “Adafruit ItsyBitsy 32u4 5V 16MHz”.
+
+Next go to the Sketch menu and under “Include Library” open “Manage Libraries…”. Search for “HID-Project”, then find the entry shown for “HID-Project by NicoHood” and click Install. Then search for “ArduinoJSON”. Change the version selection for this library to version “5.13.5” and click Install.
+
+Next from the hackershed repository find the file  called "cli.ino" and open this in the Arduino app. Click the “Verify” button near the top left corner of the Arduino app to confirm all configuration is complete. If any warnings or errors are shown, review the section above to confirm that the correct versions of required libraries were installed correctly.
+
+Next plug in the ItsyBitsy and quickly double-tap the programming button, then go to the Tools menu and hover over “Port”. Select the new entry shown there for the ItsyBitsy (should have “ItsyBitsy” in port name shown).
+
+Once all this is configured, upload the code to the ItsyBitsy by plugging it in again and double-tapping the programming button, then click the Upload button (near the Verify button). A message will be shown in the lower left corner of the Arduino app saying “Compiling sketch…”. When this message changes to “Uploading…” double-tap the automaton programming button again. When successful, the Arduino app will show a message near the bottom left saying “Done uploading”. 
+
+Note that it may take several tries to get timing correct between double-tapping the programming button and clicking the Upload button. Repeat this sequence as needed until upload succeeds.
 
 ### Hardware
 Adafruit ItsyBitsy 5v
