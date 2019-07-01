@@ -1,6 +1,6 @@
 void setup() {
   // put your setup code here, to run once:
-
+  pinMode(13, OUTPUT);
 }
 
 void showusage() {
@@ -8,6 +8,12 @@ void showusage() {
   Serial.println(F("help: this message"));
 
 
+}
+void flash_led(){
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
 }
 void enter_cli() {
   
@@ -21,13 +27,13 @@ void enter_cli() {
     Serial.println(s);
 
     if (s.startsWith("flash") == true) {
-  
+      flash_led();
     }
     else if (s.startsWith(F("help")) == true) {
       showusage();
     }
 
-    else if (s.startsWith(F("set_autorun")) == true) {
+    else if (s.startsWith(F("set_option")) == true) {
         char *line = (char *)s.c_str();
         char *ptr = NULL;
         byte index = 0;
