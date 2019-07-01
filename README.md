@@ -1,13 +1,13 @@
 # hackershed
-Sample Code for Hacker Shed focusing on Hardware Hacking for macOS Admins
+Sample code for Hacker Shed focusing on hardware hacking for macOS admins
 
 ### Included Projects
 
-* cli: implement a command line interface over serial for the Arudino
-* flashled: Simple project to show how to flash the LED
-* keyboardmouse: control the Mac keyboard / mouse
-* launchdaemon: macOS LaunchDaemon to monitor the mac serial port and speak when a physical button is pressed.
-* readbutton: read the state of an external button between GPIO 4 and ground and print state.
+* **cli**: implement a command line interface over serial for the Arudino
+* **flashled**: Simple project to show how to flash the LED
+* **keyboardmouse**: control the Mac keyboard / mouse
+* **launchdaemon**: macOS LaunchDaemon to monitor the mac serial port and speak when a physical button is pressed.
+* **readbutton**: read the state of an external button between GPIO 4 and ground and print state.
 
  
 ### Setup
