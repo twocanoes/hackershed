@@ -1,7 +1,7 @@
 # hackershed
 Sample Code for Hacker Shed focusing on Hardware Hacking for macOS Admins
 
-###Included Projects:
+### Included Projects
 
 * cli: implement a command line interface over serial for the Arudino
 * flashled: Simple project to show how to flash the LED
