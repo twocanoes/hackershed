@@ -44,10 +44,10 @@ void show_about_menu() {
 void mouse_jump(){
 
   Mouse.begin();
-  Mouse.move(50-random(0,1000),50-random(0,1000));
+  Mouse.move(5-random(1,10),6-random(1,10));
   Mouse.end();
 
-  delay(1000);
+  delay(10);
 
 
 }
