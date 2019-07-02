@@ -59,7 +59,11 @@ Sample project to show how to use a launchdaemon to monitor the state of an exte
 1. Copy serial_monitor.rb to `/usr/local/bin`
 1. Copy serial_monitor.plist to `/Library/LaunchDaemons`
 
-Open Terminal and run these commands: 
+Install Xcode command line tools (if not currently installed) by opening Terminal and running this command:
+
+    sudo xcode-select --install
+
+Then run these commands in Terminal as well: 
 
     chmod 755 /usr/local/bin/serial_monitor.rb
     sudo gem install rubyserial
@@ -75,7 +79,7 @@ When done, remove the launchdaemon by running these commands in Terminal:
     cd /Library/LaunchDaemons/
     sudo launchctl stop serial_monitor
     sudo launchctl unload serial_monitor.plist 
-    rm serial_monitor.plist
+    sudo rm serial_monitor.plist
     rm /usr/local/bin/serial_monitor.rb
 
 #### readbutton
