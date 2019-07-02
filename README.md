@@ -6,8 +6,8 @@ Sample code for Hacker Shed focusing on hardware hacking for macOS admins
 * **cli**: implement a command line interface over serial for the Arudino
 * **flashled**: Simple project to show how to flash the LED
 * **keyboardmouse**: control the Mac keyboard / mouse
-* **launchdaemon**: macOS LaunchDaemon to monitor the mac serial port and speak when a physical button is pressed.
-* **readbutton**: read the state of an external button between GPIO 4 and ground and print state.
+* **launchdaemon**: macOS LaunchDaemon to monitor the mac serial port and speak when a physical button is pressed
+* **readbutton**: read the state of an external button between GPIO 4 and ground and print state
 
  
 ### Setup
@@ -23,9 +23,9 @@ Next go to the Sketch menu and under `Include Library` open `Manage Libraries…
 
 Next from the hackershed repository find the file  called `cli.ino` in the `cli` folder and open this in the Arduino app. Click the `Verify` button near the top left corner of the Arduino app to confirm all configuration is complete. If any warnings or errors are shown, review the section above to confirm that the correct versions of required libraries were installed correctly.
 
-Next plug in the ItsyBitsy and quickly double-tap the programming button, then go to the Tools menu and hover over `Port`. Select the new entry shown there for the ItsyBitsy (should have “ItsyBitsy” in port name shown).  If this is not shown, disconnect and reconnect the ItsyBitsy and try this again.  This may take several tries to complete.  
+Next plug in the ItsyBitsy and go to the Tools menu.  Hover over `Port`. Select the new entry shown there for the ItsyBitsy (should have `/dev/cu.usbmodem` in port name shown).  If this is not shown at first, close the Tools menu and wait a moment, then reopen it and move the cursor back to the Port section.  
 
-Once all this is configured, upload the code to the ItsyBitsy by plugging it in again, then clicking the Upload button (near the Verify button). A message will be shown in the lower left corner of the Arduino app saying `Compiling sketch…`, then `Uploading…`, then `Done uploading`. 
+Once all this is configured, upload the code to the ItsyBitsy by clicking the Upload button (near the Verify button). A message will be shown in the lower left corner of the Arduino app saying `Compiling sketch…`, then `Uploading…`, then `Done uploading`. 
 
 ### Hardware
 Adafruit ItsyBitsy 5v
