@@ -59,6 +59,8 @@ Sample project to show how to use a launchdaemon to monitor the state of an exte
 1. Copy serial_monitor.rb to `/usr/local/bin`
 1. Copy serial_monitor.plist to `/Library/LaunchDaemons`
 
+> To navigate to hidden folders in Finder, type `command-shift-g` and then enter the desired folder path.
+
 Install Xcode command line tools (if not currently installed) by opening Terminal and running this command:
 
     sudo xcode-select --install
@@ -72,7 +74,9 @@ Then run these commands in Terminal as well:
     sudo launchctl load serial_monitor.plist 
     sudo launchctl start serial_monitor
 
-Connect button / short pins 4 and GND. Mac should speak "down".
+Connect button or short pins 4 and GND. Mac should speak "down".
+
+> Pins 4 and GND are on the side of the ItsyBitsy opposite the usb connector and are marked as `4` and `G` respectively.
 
 When done, remove the launchdaemon by running these commands in Terminal: 
 
@@ -87,4 +91,4 @@ Project to monitor pin 4. Prints "up" when pin is free or "down" when connected 
 
 1. Upload readbutton.ino to Arduino.
 1. Open Serial.
-1. Connect button / short pins 4 and GND.
+1. Connect button or short pins 4 and GND.
